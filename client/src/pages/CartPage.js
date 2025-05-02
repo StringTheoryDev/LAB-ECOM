@@ -7,7 +7,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from '../components/CheckoutForm';
 
 // Initialize Stripe
-const stripePromise = loadStripe('pk_test_51RBn6hCpIyLjSYkkDMA0rryefXAjEdQJVyapeHjpMGf32pt9EkbIvmhozurv6nCI6gTxerhHQmNwrFiya0hTBvcQ00mmvYjyup');
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const CartPage = () => {
   const { cartItems, removeFromCart, updateCartQuantity, clearCart } = useContext(CartContext);
